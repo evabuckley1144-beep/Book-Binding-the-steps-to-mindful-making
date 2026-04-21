@@ -1,0 +1,246 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Adorable+Memories&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: #EDECE7;
+  color: #2f2f2f;
+  line-height: 1.7;
+}
+
+.page {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 2rem 120px;
+}
+
+
+
+h1, h2, h3, h4,
+.logo,
+.logo-tagline,
+.nav-right a {
+  font-family: "Adorable Memories", serif;
+  font-weight: normal;
+}
+
+
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 2rem 5%;
+  background-color: #EDECE7;
+}
+
+
+.nav-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 1.2rem;
+  color: #859EAC;
+}
+
+.logo-tagline {
+  font-size: 0.75rem;
+  color: #777777;
+  letter-spacing: 0.05em;
+}
+
+
+.nav-right {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: #777777;
+  font-size: 0.9rem;
+  position: relative;
+  padding-bottom: 6px;
+}
+
+
+.nav-right a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+
+  background-image: repeating-linear-gradient(
+    to right,
+    #859EAC 0px,
+    #859EAC 6px,
+    transparent 6px,
+    transparent 12px
+  );
+
+  transition: width 0.4s ease;
+}
+
+.nav-right a:hover::after {
+  width: 100%;
+}
+
+.nav-right a:hover {
+  color: #859EAC;
+}
+
+
+
+.intro,
+.process-overview p,
+.step-text p,
+.subtle,
+.support {
+  font-size: 1rem;
+  color: #777777;
+}
+
+.subtle,
+.support {
+  font-size: 0.95rem;
+}
+
+
+
+.hero {
+  max-width: 700px;
+  margin: 120px auto;
+  padding: 0 2rem;
+  color: #859EAC;
+}
+
+.hero h2 {
+  font-size: 2.6rem;
+  font-weight: normal;
+  line-height: 1.3;
+  margin-bottom: 2.5rem;
+}
+
+
+.btn {
+  text-decoration: none;
+  color: #859EAC;
+  border: 1px solid #859EAC;
+  padding: 0.7rem 1.6rem;
+  font-size: 0.9rem;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #859EAC;
+  color: #EDECE7;
+}
+
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.step {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.step-text {
+  flex: 1;
+}
+
+.step-image {
+  flex: 1;
+  height: 260px;
+  overflow: hidden;
+}
+
+.step-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+}
+
+
+@media (max-width: 768px) {
+
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .nav-right {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+
+  .page {
+    padding: 40px 1.5rem 80px;
+  }
+
+
+  .hero {
+    margin: 80px auto;
+    padding: 0 1.5rem;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+
+  .button-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
+  .step {
+    flex-direction: column;
+  }
+
+  .step-image {
+    width: 100%;
+    height: 220px;
+  }
+
+  .steps {
+    gap: 60px;
+  }
+}

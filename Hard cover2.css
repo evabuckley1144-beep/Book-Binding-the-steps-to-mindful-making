@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Adorable+Memories&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: #EDECE7;
+  color: #859EAC;
+  line-height: 1.7;
+}
+
+/* PAGE WRAPPER */
+.page {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 2rem 120px;
+}
+
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 2rem 5%;
+  background-color: #EDECE7;
+}
+
+.nav-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: normal;
+  line-height: 1.2;
+  color: #859EAC;
+}
+
+.logo-tagline {
+  font-size: 0.75rem;
+  color: #777777;
+  margin-top: 2px;
+  letter-spacing: 0.05em;
+}
+
+.nav-right {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: #777777;
+  font-size: 0.9rem;
+  position: relative;
+  padding-bottom: 6px;
+}
+
+.nav-right a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+
+  background-image: repeating-linear-gradient(
+    to right,
+    #859EAC 0px,
+    #859EAC 6px,
+    transparent 6px,
+    transparent 12px
+  );
+
+  transition: width 0.4s ease;
+}
+
+.nav-right a:hover::after {
+  width: 100%;
+}
+
+.nav-right a:hover {
+  color: #859EAC;
+}
+
+
+.intro-block h1 {
+  font-size: 2rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  color: #859EAC;
+}
+
+.intro-block p {
+  margin-bottom: 1rem;
+  color: #777777;
+}
+
+.subtle {
+  color: #7A848D;
+}
+
+
+.process-overview {
+  margin-top: 80px;
+  margin-bottom: 120px;
+}
+
+.process-overview h2 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-top: 2rem;
+}
+
+.process-overview p {
+  color: #777777;
+  margin-top: 0.5rem;
+}
+
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.step {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.step-text {
+  flex: 1;
+}
+
+.step-text h3 {
+  font-size: 0.9rem;
+  color: #777777;
+  margin-bottom: 0.5rem;
+}
+
+.step-text h4 {
+  font-size: 1.4rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.step-text p {
+  color: #777777;
+}
+
+.step-image {
+  flex: 1;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.step-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.materials-panel {
+  position: fixed;
+  right: 0;
+  top: 80px;
+  z-index: 2000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+
+.materials-toggle {
+  margin-bottom: 0.4rem;
+
+  background: #EDECE7;
+  color: #859EAC;
+  border: 1px solid #859EAC;
+
+  padding: 0.7rem 1.6rem;
+  min-width: 220px;
+  text-align: center;
+
+  cursor: pointer;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.9rem;
+
+  transition: 0.3s ease;
+
+  transform: translateX(8px);
+}
+
+.materials-toggle:hover {
+  background-color: #859EAC;
+  color: #EDECE7;
+}
+
+
+.materials-content {
+  width: 220px;
+  background-color: #EDECE7;
+  border-left: 1px solid #859EAC;
+  padding: 1.5rem;
+
+  transform: translateX(100%);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.materials-panel.open .materials-content {
+  transform: translateX(0);
+}
+
+.materials-content h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.materials-content ul {
+  list-style: none;
+  font-size: 0.9rem;
+  color: #777777;
+}
+
+.materials-content li {
+  margin-bottom: 0.5rem;
+}
+
+.completion {
+  color: #777777;   /* your body text color */
+  margin-top: 100px;
+}
+
+.completion h3 {
+  font-weight: normal;
+  color: #859EAC;   /* your accent color */
+  margin-bottom: 1rem;
+}
+
+.completion p {
+  color: #777777;
+}
+
+@media (max-width: 768px) {
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .nav-right {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .page {
+    padding: 30px 1.5rem 80px;
+  }
+
+  .intro-block h1 {
+    font-size: 1.6rem;
+  }
+
+  .step {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .step-image {
+    width: 100%;
+    height: 220px;
+  }
+
+  .steps {
+    gap: 60px;
+  }
+
+  .materials-panel {
+    right: 8px;
+    top: 75px;
+  }
+
+  .materials-toggle {
+    min-width: 180px;
+    font-size: 0.85rem;
+  }
+
+  .materials-content {
+    width: 180px;
+  }
+}
